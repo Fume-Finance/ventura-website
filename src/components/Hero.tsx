@@ -42,18 +42,27 @@ export default function Hero() {
         />
       </div>
 
-      {/* Dark + brand color overlay (kept light enough for the skyline to read) */}
+      {/* Dark overlay: heavier on the left where the headline sits, lighter on the right */}
       <div
         aria-hidden
         className="absolute inset-0 -z-20"
         style={{
           background:
-            "linear-gradient(180deg, rgba(12,26,48,0.30) 0%, rgba(12,26,48,0.40) 50%, rgba(12,26,48,0.85) 100%)",
+            "linear-gradient(180deg, rgba(8,18,36,0.55) 0%, rgba(8,18,36,0.70) 55%, rgba(8,18,36,0.95) 100%)",
         }}
       />
       <div
         aria-hidden
-        className="absolute inset-0 -z-20 bg-gradient-to-r from-brand-900/75 via-brand-900/30 to-transparent"
+        className="absolute inset-0 -z-20 bg-gradient-to-r from-brand-900/90 via-brand-900/55 to-brand-900/20"
+      />
+      {/* Extra darken behind the headline column */}
+      <div
+        aria-hidden
+        className="absolute inset-y-0 left-0 -z-20 w-full max-w-[720px] md:max-w-[860px]"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(8,18,36,0.55) 0%, rgba(8,18,36,0.30) 70%, rgba(8,18,36,0) 100%)",
+        }}
       />
 
       {/* Soft animated grid */}
