@@ -29,7 +29,7 @@ export default function Hero() {
   const orb3Y = useTransform(mouseY, [-1, 1], [12, -12]);
 
   return (
-    <section className="relative isolate overflow-hidden bg-brand-900 text-white">
+    <section className="relative isolate -mt-20 overflow-hidden bg-brand-900 text-white">
       {/* Background image */}
       <div aria-hidden className="absolute inset-0 -z-30">
         <Image
@@ -113,7 +113,7 @@ export default function Hero() {
         className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-b from-transparent to-[#FAFBFD]"
       />
 
-      <div className="relative mx-auto max-w-(--max-width-container) px-6 pb-32 pt-24 md:px-10 md:pb-44 md:pt-36">
+      <div className="relative mx-auto max-w-(--max-width-container) px-6 pb-32 pt-40 md:px-10 md:pb-44 md:pt-56">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
